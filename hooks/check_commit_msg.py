@@ -30,4 +30,4 @@ def main(*args):
                 "\tsee https://github.com/Gorgeous-Ghouls/commit-msg-validator#keywords for description\n"  # noqa: E501
                 f"\n\tCurrent keyword is {keyword} \n"
             )
-            sys.exit()
+            sys.exit(1)
