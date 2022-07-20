@@ -25,9 +25,9 @@ def main(*args):
         keyword = msg.split(':', maxsplit=1)[0]
         if keyword not in keywords:
             logger.info(
-                "\tCommit message must start with a keyword" +
-                f"\n\tvalid keywords {*keywords,}\n" +
-                "see \n" +
+                "\tCommit message must start with a keyword"
+                f"\n\tvalid keywords {*keywords,}\n"
+                "see https://github.com/Gorgeous-Ghouls/commit-msg-validator#keywords for description\n"  # noqa: E501
                 f"\n\tCurrent keyword is {keyword} \n"
             )
             sys.exit()
