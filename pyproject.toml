@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "commit-msg-validator"
-version = "0.1.0"
+version = "1.0.0"
 description = "A hook for pre-commit package to validate commit message"
 authors = ["p0lygun <solankivibhakar82@gmail.com>"]
 license = "MIT"
