@@ -27,7 +27,7 @@ def main(*args):
             logger.info(
                 "\tCommit message must start with a keyword"
                 f"\n\tvalid keywords {*keywords,}\n"
-                "see https://github.com/Gorgeous-Ghouls/commit-msg-validator#keywords for description\n"  # noqa: E501
+                "\tsee https://github.com/Gorgeous-Ghouls/commit-msg-validator#keywords for description\n"  # noqa: E501
                 f"\n\tCurrent keyword is {keyword} \n"
             )
             sys.exit()
