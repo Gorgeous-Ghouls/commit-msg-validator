@@ -20,6 +20,7 @@ keywords = [
 def main(*args):
     """Check if a commit message is valid."""
     with open(sys.argv[1]) as FILE:
+        logger.debug(sys.argv[1])
         data = FILE.read()
         msg = data.split('\n')[0]
         keyword = msg.split(':', maxsplit=1)[0]
