@@ -1,0 +1,6 @@
+- name: Commit Msg Validator
+  entry: check-commit-msg
+  language: python
+  id: check-commit-msg
+  stages:
+    - commit-msg
