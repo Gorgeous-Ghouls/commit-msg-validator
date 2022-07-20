@@ -2,5 +2,4 @@
   entry: check-commit-msg
   language: python
   id: check-commit-msg
-  stages:
-    - commit-msg
+  stages: [commit-msg]
