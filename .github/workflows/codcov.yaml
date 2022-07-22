@@ -22,6 +22,7 @@ jobs:
 
     - name: Generate coverage report
       run: |
+        pip install loguru
         pip install pytest
         pip install pytest-cov
         pytest --cov=hooks/ --cov-report=xml
