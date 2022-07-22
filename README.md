@@ -1,3 +1,5 @@
+![](https://img.shields.io/codecov/c/github/Gorgeous-Ghouls/commit-msg-validator?style=for-the-badge)
+
 # commit-msg-validator
 A pre-commit hook to validate commit messages
 
