@@ -23,10 +23,11 @@ def main(*args):
         data = FILE.read()
         msg = data.split('\n')[0]
         keyword = msg.split(':', maxsplit=1)[0]
-        if keyword not in keywords:
+        all_keyword = keywords + [s.capitalize() for s in keywords]
+        if keyword not in all_keyword:
             logger.info(
                 "\tCommit message must start with a keyword"
-                f"\n\tvalid keywords {*keywords,}\n"
+                f"\n\tvalid keywords {*all_keyword,}\n"
                 "\tsee https://github.com/Gorgeous-Ghouls/commit-msg-validator#keywords for description\n"  # noqa: E501
                 f"\n\tCurrent keyword is {keyword} \n"
             )
