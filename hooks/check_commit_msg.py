@@ -23,7 +23,9 @@ def main(*args):
         data = FILE.read()
         msg = data.split('\n')[0]
         keyword = msg.split(':', maxsplit=1)[0]
-        all_keyword = keywords + [s.capitalize() for s in keywords]
+        capitalize_keywords = [word.capitalize() for word in keywords]
+        uppercase_keywords = [word.upper() for word in keywords]
+        all_keyword = keywords + capitalize_keywords + uppercase_keywords
         if keyword not in all_keyword:
             logger.info(
                 "\tCommit message must start with a keyword"
