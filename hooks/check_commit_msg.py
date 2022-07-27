@@ -29,7 +29,7 @@ def main(*args):
         if keyword not in all_keyword:
             logger.info(
                 "\tCommit message must start with a keyword"
-                f"\n\tvalid keywords {*all_keyword,}\n"
+                f"\n\tvalid keywords {*keywords,}\n"
                 "\tsee https://github.com/Gorgeous-Ghouls/commit-msg-validator#keywords for description\n"  # noqa: E501
                 f"\n\tCurrent keyword is {keyword} \n"
             )
