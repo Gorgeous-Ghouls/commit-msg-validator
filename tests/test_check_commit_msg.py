@@ -15,8 +15,15 @@ def test_check_commit_msg(tmp_path):
             commit_msg = "wrong: keyword \n exit with \n 1"
             commit_msg_file.write_text(commit_msg)
             main()
+        with pytest.raises(SystemExit):
+            commit_msg = "feat(chore):"
+            commit_msg_file.write_text(commit_msg)
+            main()
         try:
             commit_msg = "feat: correct keyword \n exit with \n 0"
+            commit_msg_file.write_text(commit_msg)
+            main()
+            commit_msg = "feat(scope): correct keyword \n exit with \n 0"
             commit_msg_file.write_text(commit_msg)
             main()
         except SystemExit:
