@@ -18,3 +18,9 @@ A pre-commit hook to validate commit messages
 |    $ci$    | continuous integration related                                                                                                             |
 |  $build$   | changes that affect the build system or external dependencies                                                                              |
 |  $revert$  | reverts a previous commit                                                                                                                  |
+
+
+# Command to test on dev
+```bash
+pre-commit try-repo . --commit-msg-filename commit_message.txt --hook-stage commit-msg
+```
