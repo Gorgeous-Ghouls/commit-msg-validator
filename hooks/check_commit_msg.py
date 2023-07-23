@@ -55,4 +55,5 @@ def main(*args):
 
     # write commit message back to file
     with open(sys.argv[1], 'w') as FILE:
-        FILE.write(f"{keyword}({scope}): {msg}")
+        scope = f"({scope})" if scope else ""
+        FILE.write(f"{keyword}{scope}: {msg}")
