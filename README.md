@@ -20,6 +20,28 @@ A pre-commit hook to validate commit messages
 |  $revert$  | reverts a previous commit                                                                                                                  |
 
 
+# valid commit message format
+The basic structure of the message format is 
+```
+type(scope): message
+```
+In this `type` and `message` are mandatory, and `scope` can be empty
+so for example these are valid commit message format
+```
+feat(app): added feature to list users
+fix: resolved the issue with the connection layer
+```
+These are **Invalid**
+```
+added feature to list users  ( no type specified )
+fix:    ( no message specified )
+fix(app: added feature to list users (didnt close the bracket)
+something: msg (invalid type keyword)
+```
+
+
+
+
 # Command to test on dev
 ```bash
 pre-commit try-repo . --commit-msg-filename commit_message.txt --hook-stage commit-msg
